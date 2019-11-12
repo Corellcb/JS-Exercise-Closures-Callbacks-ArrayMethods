@@ -162,7 +162,11 @@ function processContains(item, list, callback) {
  * should return 3.
 */
 function processDuplicateFree(list, callback) {
-  
+  const deDupe = new Set(list);
+
+  const deDupeArr = [...deDupe];
+
+  return callback(deDupeArr);
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
